@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+    <description name="DBeaver - outlook integration" url="https://dbeaver.io/update/outlook/latest">DBeaver - Outlook integration</description>
+
+    <feature id="org.jkiss.dbeaver.ext.outlook.feature">
+        <category name="org.jikss.dbeaver.outlook.category"/>
+    </feature>
+    <category-def name="org.jikss.dbeaver.outlook.category" label="DBeaver Outlook Support"/>
+</site>
