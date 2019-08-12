@@ -2,21 +2,6 @@
 <?eclipse version="3.4"?>
 <plugin>
 
-    <extension point="org.jkiss.dbeaver.dataTransfer">
-        <node ref="stream_consumer">
-            <processor
-                id="stream.html"
-                class="org.jkiss.dbeaver.data.outlook.export.DataExporterOutlookHtml"
-                description="%dataTransfer.processor.html.description"
-                icon="icons/outlook.png"
-                label="%dataTransfer.processor.html.name"
-                binary="true"
-                appFileExtension="html"
-                appName="Outlook"
-                order="10">
-           </processor>
-         </node>
-    </extension>
 
     <extension point="org.eclipse.ui.commands">
         <category id="org.jkiss.dbeaver.ext.data.outlook" name="%category.org.jkiss.dbeaver.ext.data.outlook.name" description="%category.org.jkiss.dbeaver.ext.data.outlook.description"/>
@@ -41,11 +26,11 @@
 
         <!-- Results viewer status bar additions -->
         <menuContribution allPopups="false" locationURI="toolbar:org.jkiss.dbeaver.ui.controls.resultset.status?after=presentations">
-            <command commandId="org.jkiss.dbeaver.core.resultset.openWith" style="push" mode="FORCE_TEXT" label="%command.org.jkiss.dbeaver.ext.data.outlook.results.openSpreadsheet.toolbar.label">
+            <command commandId="org.jkiss.dbeaver.ext.data.outlook.results.openSpreadsheet" style="push" mode="FORCE_TEXT" label="%command.org.jkiss.dbeaver.ext.data.outlook.results.openSpreadsheet.toolbar.label"/>
+        </menuContribution>
 
-            <parameter name="processorId" value="stream_consumer:stream.html">
-                </parameter>
-	    </command>
+        <menuContribution allPopups="false" locationURI="popup:org.eclipse.ui.popup.any?after=results_export">
+            <command commandId="org.jkiss.dbeaver.ext.data.outlook.results.openSpreadsheet"/>
         </menuContribution>
 
     </extension>

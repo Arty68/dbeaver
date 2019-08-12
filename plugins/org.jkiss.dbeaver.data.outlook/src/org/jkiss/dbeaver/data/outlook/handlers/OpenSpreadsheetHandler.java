@@ -111,7 +111,7 @@ public class OpenSpreadsheetHandler extends AbstractHandler
 					Map<Object, Object> properties = new HashMap<>();
 
 
-                    consumer.initTransfer(dataContainer, settings, new IDataTransferConsumer.TransferParameters(false, false), exporter, properties);
+                    consumer.initTransfer(dataContainer, settings, new IDataTransferConsumer.TransferParameters(false, true), exporter, properties);
 
 
                     DBDDataFilter dataFilter = resultSet.getModel().getDataFilter();
